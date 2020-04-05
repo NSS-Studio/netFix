@@ -19,6 +19,9 @@ else:CONFIG(release, release|debug){
     DEFINES += QT_NO_DEBUG_OUTPUT
 }
 
+# Remove embeded manifest
+CONFIG -= embed_manifest_exe
+
 RC_FILE = \
         netFixer.rc \
         rec.rc
