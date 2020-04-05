@@ -63,3 +63,5 @@ DISTFILES += \
 RESOURCES += \
     rec.qrc \
     rec.qrc
+
+win32:LIBS += -ladvapi32 -luser32
