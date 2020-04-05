@@ -19,7 +19,7 @@ MainWindow::MainWindow(QWidget *parent) :
     mainWid -> setLayout(vbFix);
 
     netfixer = new netDealer(vbFix);
-    QObject::connect(netfixer, &netDealer::sendMessage, this, &recvMessage);
+    QObject::connect(netfixer, &netDealer::sendMessage, this, &MainWindow::recvMessage);
 
     puAutoFix = new QPushButton(tr("一键修复"), mainWid);
     puAutoFix -> setFixedHeight(this->height()/2 - 40);
